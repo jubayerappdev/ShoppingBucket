@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "337941569802",
+    "project_id": "shopping-bucket",
+    "storage_bucket": "shopping-bucket.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337941569802:android:54ee73aee47d53593d5af3",
+        "android_client_info": {
+          "package_name": "com.creativeitinstitute.shoppingbucket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA9Cx_DhVvXbKBTpMnAz_sn2wu7w2yYp0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
