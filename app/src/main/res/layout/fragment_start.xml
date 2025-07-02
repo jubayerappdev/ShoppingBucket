@@ -1,52 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".views.starter.StartFragment">
-    
-    <ImageView
-        android:id="@+id/logo_img"
-        android:layout_gravity="center"
-        android:src="@mipmap/ic_launcher_round"
-        android:layout_width="@dimen/_120sdp"
-        android:layout_height="@dimen/_120sdp"/>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto"
+	xmlns:tools = "http://schemas.android.com/tools"
+	android:layout_width = "match_parent"
+	android:layout_height = "match_parent"
+	android:gravity = "center"
+	android:orientation = "vertical"
+	android:backgroundTint="?attr/colorSurface"
+	tools:context = ".views.starter.StartFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_32sdp"
-        android:fontFamily="@font/bebas_neue"
-        android:gravity="center"
-        android:text="Welcome to Shopping Bucket App"
-        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-        android:textColor="#673AB7" />
+	<ImageView
+		android:id = "@+id/logo_img"
+		android:layout_width = "@dimen/_120sdp"
+		android:layout_height = "@dimen/_120sdp"
+		android:layout_gravity = "center"
+		android:contentDescription = "App logo"
+		android:src = "@mipmap/ic_launcher_round" />
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:fontFamily="@font/poppins"
-        android:textStyle="bold"
-        android:text="Login"
-        android:layout_marginHorizontal="@dimen/_32sdp"
-        android:layout_marginVertical="@dimen/_8sdp"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+	<TextView
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:layout_margin = "@dimen/_32sdp"
+		android:fontFamily = "@font/bebas_neue"
+		android:gravity = "center"
+		android:text = "Welcome to Shopping Bucket App"
+		android:textAppearance = "@style/TextAppearance.Material3.TitleLarge"
+		android:textColor = "?attr/colorPrimary" />
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:fontFamily="@font/poppins"
-        android:textStyle="bold"
-        android:text="Register"
-        android:layout_marginHorizontal="@dimen/_32sdp"
-        app:strokeColor="#673AB7"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+	<com.google.android.material.button.MaterialButton
+		android:id = "@+id/btnLogin"
+		style = "@style/ThemeOverlay.Material3Expressive.Button.Filled"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:layout_marginHorizontal = "@dimen/_32sdp"
+		android:layout_marginVertical = "@dimen/_8sdp"
+		android:fontFamily = "@font/poppins"
+		android:text = "Login"
+		android:backgroundTint="?attr/colorPrimary"
+		android:textStyle = "bold"
+		android:textAlignment="center"
+		android:textColor="?attr/colorOnPrimary"
+		app:icon = "@drawable/ic_login"
+		app:iconGravity = "end"
+		app:iconTint = "?attr/colorOnPrimary" />
 
+
+
+
+	<TextView
+		android:id = "@+id/btnRegister"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:layout_marginHorizontal = "@dimen/_32sdp"
+		android:fontFamily = "@font/poppins"
+		android:text = "Register an account"
+		android:textStyle = "bold"
+		android:textAlignment="center"
+		android:textColor="?attr/colorOnPrimaryContainer"
+		android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+	/>
 
 
 </LinearLayout>

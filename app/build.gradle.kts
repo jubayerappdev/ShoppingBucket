@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.creativeitinstitute.shoppingbucket"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.creativeitinstitute.shoppingbucket"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -34,9 +34,11 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
-    viewBinding{
-        enable = true
+
+    buildFeatures {
+        viewBinding = true
     }
+    buildToolsVersion = "36.0.0"
 
 }
 kotlin {

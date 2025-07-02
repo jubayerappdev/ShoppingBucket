@@ -12,7 +12,6 @@ import com.creativeitinstitute.shoppingbucket.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
 
-	//    lateinit var binding: FragmentStartBinding
 	private var _binding: FragmentStartBinding? = null
 	private val binding get() = _binding!!
 
