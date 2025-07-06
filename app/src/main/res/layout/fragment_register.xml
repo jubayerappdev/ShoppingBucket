@@ -1,14 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.register.RegisterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        <TextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_margin = "@dimen/_32sdp"
+            android:fontFamily = "@font/poppins"
+            android:gravity = "center"
+            android:text = "Create your account:"
+            android:textAppearance = "@style/TextAppearance.Material3.TitleLarge"
+            android:textColor = "?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent" />
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id = "@+id/input_user_name"
+                style = "@style/Widget.Material3.TextInputLayout.FilledBox"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginHorizontal = "@dimen/_32sdp"
+                android:layout_marginTop = "@dimen/_32sdp"
+                android:hint = "Enter your username"
+                android:layout_marginVertical = "@dimen/_8sdp"
+
+                app:endIconMode="clear_text"
+                app:startIconDrawable = "@drawable/ic_user">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:inputType = "text"
+                    android:textAppearance = "@style/TextAppearance.Material3.TitleMedium" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id = "@+id/input_user_email"
+                style = "@style/Widget.Material3.TextInputLayout.FilledBox"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginHorizontal = "@dimen/_32sdp"
+                android:layout_marginTop = "@dimen/_32sdp"
+                android:hint = "Enter your email"
+                android:layout_marginVertical = "@dimen/_8sdp"
+
+                app:endIconMode = "clear_text"
+                app:startIconDrawable = "@drawable/ic_attach_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:inputType = "textEmailAddress"
+                    android:textAppearance = "@style/TextAppearance.Material3.TitleMedium" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id = "@+id/input_user_password"
+                style = "@style/Widget.Material3.TextInputLayout.FilledBox"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginHorizontal = "@dimen/_32sdp"
+                android:layout_marginVertical = "@dimen/_8sdp"
+                android:hint = "Enter your Password"
+                app:endIconMode = "password_toggle"
+                app:startIconDrawable = "@drawable/ic_key">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:inputType = "textPassword"
+                    android:textAppearance = "@style/TextAppearance.Material3.TitleMedium" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id = "@+id/input_user_password_confirm"
+                style = "@style/Widget.Material3.TextInputLayout.FilledBox"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginHorizontal = "@dimen/_32sdp"
+                android:layout_marginVertical = "@dimen/_8sdp"
+                android:hint = "Confirm your Password"
+                app:endIconMode = "password_toggle"
+                app:startIconDrawable = "@drawable/ic_key">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:inputType = "textPassword"
+                    android:textAppearance = "@style/TextAppearance.Material3.TitleMedium" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id = "@+id/btn_register"
+                style = "@style/ThemeOverlay.Material3Expressive.Button.Filled"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginHorizontal = "@dimen/_32sdp"
+                android:layout_marginVertical = "@dimen/_8sdp"
+                android:backgroundTint = "?attr/colorPrimary"
+                android:fontFamily = "@font/poppins"
+                android:text = "Register"
+                android:textAlignment = "center"
+                android:textColor = "?attr/colorOnPrimary"
+                android:textStyle = "bold"
+                app:iconGravity = "end"
+                app:iconTint = "?attr/colorOnPrimary" />
+
+            <TextView
+                android:id = "@+id/btn_login"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginHorizontal = "@dimen/_32sdp"
+                android:layout_marginVertical = "@dimen/_2sdp"
+                android:fontFamily = "@font/poppins"
+                android:text = "Already have an account?"
+                android:textAlignment = "center"
+                android:textAppearance = "@style/TextAppearance.Material3.TitleSmall"
+                android:textColor = "?attr/colorOnPrimaryContainer"
+                android:textStyle = "bold" />
+
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
