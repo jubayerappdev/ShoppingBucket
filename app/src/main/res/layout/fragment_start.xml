@@ -7,13 +7,16 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".views.starter.StartFragment">
-    
-    <ImageView
-        android:id="@+id/logo_img"
-        android:layout_gravity="center"
-        android:src="@mipmap/ic_launcher_round"
-        android:layout_width="@dimen/_120sdp"
-        android:layout_height="@dimen/_120sdp"/>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_250sdp"
+        app:lottie_rawRes="@raw/ecom_1"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -21,7 +24,7 @@
         android:layout_margin="@dimen/_32sdp"
         android:fontFamily="@font/bebas_neue"
         android:gravity="center"
-        android:text="Welcome to Shopping Bucket App"
+        android:text="Welcome to Shopping Bucket"
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         android:textColor="#673AB7" />
 
