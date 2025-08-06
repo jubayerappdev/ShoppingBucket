@@ -6,4 +6,6 @@
     </style>
 
     <style name="Theme.ShoppingBucket" parent="Base.Theme.ShoppingBucket" />
+
+    <style name="Theme.ShoppingBucket.App.Bar" parent="Theme.Material3.DayNight"/>
 </resources>

@@ -10,6 +10,7 @@ import com.creativeitinstitute.shoppingbucket.core.DataState
 import com.creativeitinstitute.shoppingbucket.data.models.UserLogin
 import com.creativeitinstitute.shoppingbucket.databinding.FragmentLoginBinding
 import com.creativeitinstitute.shoppingbucket.isEmpty
+import com.creativeitinstitute.shoppingbucket.views.dashboard.seller.SellerDashboard
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -58,7 +59,8 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                 is DataState.Success -> {
                     loading.dismiss()
                     Toast.makeText(context, "User logged in: ${it.data}", Toast.LENGTH_SHORT).show()
-                   findNavController().navigate(R.id.action_loginFragment_to_dashBoardFragment)
+                    startActivity(Intent(requireContext(), SellerDashboard::class.java))
+                    requireActivity().finish()
                 }
             }
         }
