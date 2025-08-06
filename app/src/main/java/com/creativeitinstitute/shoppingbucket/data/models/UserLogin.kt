@@ -1,10 +1,7 @@
 package com.creativeitinstitute.shoppingbucket.data.models
 
-data class UserRegistration(
-    val name:String,
+data class UserLogin(
     val email:String,
     val password:String,
-    val userType: String,
-    var userID: String
 
 )

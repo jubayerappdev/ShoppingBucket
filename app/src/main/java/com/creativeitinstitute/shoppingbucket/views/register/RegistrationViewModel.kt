@@ -7,8 +7,13 @@ import androidx.lifecycle.ViewModel
 import com.creativeitinstitute.shoppingbucket.core.DataState
 import com.creativeitinstitute.shoppingbucket.data.models.UserRegistration
 import com.creativeitinstitute.shoppingbucket.data.repository.AuthRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import jakarta.inject.Inject
 
-class RegistrationViewModel : ViewModel(){
+@HiltViewModel
+class RegistrationViewModel @Inject constructor(
+    private val authService: AuthRepository
+): ViewModel(){
 
    private val _registrationResponse = MutableLiveData<DataState<UserRegistration>>()
 
@@ -20,19 +25,28 @@ class RegistrationViewModel : ViewModel(){
 
         _registrationResponse.postValue(DataState.Loading())
 
-        val authService  = AuthRepository()
-
         authService.userRegistration(user).addOnSuccessListener {
 
-            _registrationResponse.postValue(DataState.Success(user))
+            it.user?.let {createdUser->
+
+                user.userID = createdUser.uid
+            }
+
+            authService.createUser(user).addOnSuccessListener {
+                _registrationResponse.postValue(DataState.Success(user))
 
 
-            Log.d("TAG", "userRegistration: Success")
+            }.addOnFailureListener {error->
+                _registrationResponse.postValue(DataState.Error("${error.message}"))
+
+
+            }
+
+
 
         }.addOnFailureListener {error->
             _registrationResponse.postValue(DataState.Error("${error.message}"))
 
-            Log.d("TAG", "userRegistration: ${error.message}")
         }
 
     }

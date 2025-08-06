@@ -9,7 +9,9 @@ import com.creativeitinstitute.shoppingbucket.core.DataState
 import com.creativeitinstitute.shoppingbucket.data.models.UserRegistration
 import com.creativeitinstitute.shoppingbucket.databinding.FragmentRegisterBinding
 import com.creativeitinstitute.shoppingbucket.isEmpty
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterBinding::inflate) {
 
 
@@ -64,6 +66,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
                 is DataState.Success -> {
                     loading.dismiss()
                     Toast.makeText(context, "created User : ${it.data}", Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(R.id.action_registerFragment_to_dashBoardFragment)
                 }
             }
 
