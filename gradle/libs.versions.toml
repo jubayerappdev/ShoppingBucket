@@ -24,6 +24,8 @@ lottie = "6.6.7"
 hilt="2.57"
 fragment = "1.8.8"
 
+imagePicker = "2.1"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -46,6 +48,8 @@ lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie"
 hilt-android= { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler= { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 androidx-fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" }
+imagePicker = { group = "com.github.dhaval2404", name = "imagePicker", version.ref = "imagePicker" }
+
 
 
 [plugins]

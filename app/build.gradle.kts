@@ -74,4 +74,7 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
 
+//imagepicker
+    implementation(libs.imagePicker)
+
 }
