@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+
 @AndroidEntryPoint
 class SellerDashboard : AppCompatActivity() {
     private lateinit var binding: ActivitySellerDashboardBinding

@@ -3,6 +3,8 @@ package com.creativeitinstitute.shoppingbucket.di
 import com.creativeitinstitute.shoppingbucket.data.repository.AuthRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -33,5 +35,12 @@ class FirebaseModule {
     fun providesFirebase(jAuth: FirebaseAuth, db: FirebaseFirestore): AuthRepository{
 
         return AuthRepository(jAuth, db)
+    }
+
+    @Provides
+    @Singleton
+    fun providesFirebaseStorage(): StorageReference{
+
+        return FirebaseStorage.getInstance().reference
     }
 }

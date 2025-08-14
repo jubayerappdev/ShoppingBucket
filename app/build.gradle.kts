@@ -77,4 +77,8 @@ dependencies {
 //imagepicker
     implementation(libs.imagePicker)
 
+    implementation(libs.circleimageview)
+    implementation(libs.coil)
+    implementation(libs.glide)
+
 }

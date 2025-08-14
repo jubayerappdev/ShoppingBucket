@@ -2,4 +2,5 @@
     <string name="app_name">Shopping Bucket</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="product_description">The 14-inch model is the Goldilocks MacBook Pro. For many, the 13-inch MacBook Pro isn’t powerful enough. It only uses the M2 chip, meaning it’s lacking in the graphics department. Meanwhile, the 16-inch MacBook Pro is quite powerful, but its size can be off-putting.</string>
 </resources>
